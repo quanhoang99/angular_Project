@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {MatSliderModule} from '@angular/material/slider';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,7 @@ import {Component} from "@angular/core";
   styleUrls: ['./header.component.css'],
   imports: [
     // MatIcon
+    MatSliderModule
   ],
   standalone: true
 })
