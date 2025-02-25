@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
 import {HeaderComponent} from "./component/header.component";
 import {NgStyle} from "@angular/common";
+import {TestComponent} from "./component/test.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, NgStyle],
+  imports: [HeaderComponent, NgStyle, TestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
