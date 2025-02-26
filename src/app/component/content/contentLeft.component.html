@@ -1,0 +1,14 @@
+<div class="form-container">
+  <h1 class="p-3 text-center m-0 text-black text-4xl">Công cụ ABC</h1>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email/Số điện thoại:</mat-label>
+      <input matInput #inputField>
+    </mat-form-field>
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="getInputValue(inputField)" class="w-40">
+        Bắt đầu
+      </button>
+    </div>
+  </form>
+</div>

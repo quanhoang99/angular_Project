@@ -1,12 +1,15 @@
 import {Component} from '@angular/core';
-import {HeaderComponent} from "./component/header.component";
+import {HeaderComponent} from "./component/header/header.component";
 import {NgStyle} from "@angular/common";
-import {TestComponent} from "./component/test.component";
+import {MatGridListModule} from '@angular/material/grid-list';
+import { ContentLeftComponent } from './component/content/contentLeft.component';
+
+const componentImports = [HeaderComponent, NgStyle, MatGridListModule, ContentLeftComponent];
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, NgStyle, TestComponent],
+  imports: [componentImports],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
