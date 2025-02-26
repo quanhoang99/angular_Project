@@ -12,11 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [MatInputModule, MatFormFieldModule, FormsModule, MatButtonModule],
 })
 export class ContentLeftComponent {
-  title = "angular_Project";
-  myStyle = {
-    "background-image": "linear-gradient(to right, #d434b0, #8029fc)"
-    // 'height': 'calc(100vh - 70px)',
-  };
+
 
   getInputValue(inputEl: HTMLInputElement) {
     console.log('Input value:', inputEl.value);
