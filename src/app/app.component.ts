@@ -3,8 +3,9 @@ import {HeaderComponent} from "./component/header/header.component";
 import {NgStyle} from "@angular/common";
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ContentLeftComponent } from './component/content/contentLeft.component';
+import { ContentRightComponent } from './component/content/contentRight.component';
 
-const componentImports = [HeaderComponent, NgStyle, MatGridListModule, ContentLeftComponent];
+const componentImports = [HeaderComponent, NgStyle, MatGridListModule, ContentLeftComponent,ContentRightComponent];
 
 @Component({
   selector: 'app-root',

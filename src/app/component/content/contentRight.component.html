@@ -1,0 +1,85 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <!-- Gold Assets Section -->
+    <h1>Gold</h1>
+
+    <mat-table [dataSource]="goldDataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Loại Vàng</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="buyPrice">
+        <mat-header-cell *matHeaderCellDef>Giá Mua</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.buyPrice | number:'1.0-0'}} đ</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef>Số Lượng</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.quantity}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <mat-header-cell *matHeaderCellDef>Thành Tiền</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.total | number:'1.0-0'}} đ</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <!-- Bank Accounts Section -->
+    <h1>Bank</h1>
+
+    <mat-table [dataSource]="bankDataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Tên Ngân Hàng</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="buyPrice">
+        <mat-header-cell *matHeaderCellDef>Số Dư</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.buyPrice | number:'1.0-0'}} đ</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef>Số Tài Khoản</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.quantity}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <mat-header-cell *matHeaderCellDef>Tổng</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.total | number:'1.0-0'}} đ</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+
+<h1>Stocks</h1>
+    <mat-table [dataSource]="stockDataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Mã CP</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="buyPrice">
+        <mat-header-cell *matHeaderCellDef>Giá Mua</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.buyPrice | number:'1.0-0'}} đ</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef>Số Lượng</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.quantity}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <mat-header-cell *matHeaderCellDef>Tổng Giá Trị</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.total | number:'1.0-0'}} đ</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </mat-card-content>

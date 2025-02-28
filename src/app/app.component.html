@@ -1,9 +1,8 @@
 <div>
   <app-header/>
   <div [ngStyle]="myStyle" class="p-10">
-    <h1 class="p-3 text-center m-0 text-white text-4xl">Shopping cart</h1>
 
-    <mat-grid-list cols="4" gutterSize="16px" rowHeight="100px">
+    <mat-grid-list cols="4" gutterSize="16px" >
       <!-- Example grid tiles -->
       <mat-grid-tile
         [colspan]="2"
@@ -13,10 +12,11 @@
       </mat-grid-tile>
 
       <mat-grid-tile
+
         [colspan]="2"
-        [rowspan]="1"
+        [rowspan]="2"
         style="background: rgba(255,255,255,0.9)">
-        Tile 2 (2x1)
+        <content-right class="w-screen h-screen"/>
       </mat-grid-tile>
 
       <!-- <mat-grid-tile
@@ -33,12 +33,12 @@
         Tile 4 (1x1)
       </mat-grid-tile> -->
 
-      <mat-grid-tile
-        [colspan]="4"
-        [rowspan]="1"
-        style="background: rgba(255,255,255,0.9)">
-        Tile 5 (Full width)
-      </mat-grid-tile>
+      <!--      <mat-grid-tile-->
+      <!--        [colspan]="4"-->
+      <!--        [rowspan]="1"-->
+      <!--        style="background: rgba(255,255,255,0.9)">-->
+      <!--        Tile 5 (Full width)-->
+      <!--      </mat-grid-tile>-->
     </mat-grid-list>
   </div>
 </div>
